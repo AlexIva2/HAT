@@ -1,0 +1,28 @@
+Subject: [PATCH] cpu
+---
+Index: options/test/HAT_SRx4_ImageNet-LR.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/options/test/HAT_SRx4_ImageNet-LR.yml b/options/test/HAT_SRx4_ImageNet-LR.yml
+--- a/options/test/HAT_SRx4_ImageNet-LR.yml	(revision e1a1b7bcde6ec7c4d574cfb11578d93d81495ee1)
++++ b/options/test/HAT_SRx4_ImageNet-LR.yml	(date 1681346532861)
+@@ -1,7 +1,7 @@
+ name: HAT_SRx4_ImageNet-LR
+ model_type: HATModel
+ scale: 4
+-num_gpu: 1  # set num_gpu: 0 for cpu mode
++num_gpu: 0  # set num_gpu: 0 for cpu mode
+ manual_seed: 0
+ 
+ tile:
+@@ -12,7 +12,7 @@
+   test_1:  # the 1st test dataset
+     name: custom
+     type: SingleImageDataset
+-    dataroot_lq: input_dir
++    dataroot_lq: ./datasets/Set5/LRbicx2
+     io_backend:
+       type: disk
+ 
